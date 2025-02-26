@@ -6,9 +6,10 @@ import bg from "../assets/BetteZone.png";
 function Navbar() {
   const [activeTab, setActiveTab] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const phoneNumber = "+971557150722"; // Your contact number
 
   return (
-    <div className="w-full h-20 bg-zinc-900 px-4 py-2 fixed top-0 left-0 z-50">
+    <div className="w-full h-20 bg-zinc-900 px-4 py-2 sticky top-0 left-0 z-50">
       <nav className="flex justify-between items-center max-w-[1200px] mx-auto">
         {/* Logo */}
         <Link to="/" onClick={() => setActiveTab("home")}>
@@ -31,7 +32,10 @@ function Navbar() {
           ))}
         </div>
 
-        <span className="hidden md:block text-white">Call Us : +971-55-715-0722</span>
+        {/* Call Us (Clickable) */}
+        <a href={`tel:${phoneNumber}`} className="hidden md:block text-white hover:text-gold transition">
+          Call Us: {phoneNumber}
+        </a>
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden cursor-pointer text-white text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
@@ -57,7 +61,11 @@ function Navbar() {
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
             </Link>
           ))}
-          <span className="text-white mt-4">Call us-+971-55-715-0722</span>
+          
+          {/* Mobile Call Us Button */}
+          <a href={`tel:${phoneNumber}`} className="text-white mt-4 hover:text-gold transition">
+            Call Us: {phoneNumber}
+          </a>
         </div>
       )}
     </div>

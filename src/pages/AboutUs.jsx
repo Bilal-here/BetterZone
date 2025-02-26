@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import CEO from "../assets/CEO.jpg";
 
@@ -10,13 +10,18 @@ const services = [
   { title: "Property Renting", description: "Find the best rental properties tailored to your needs." },
 ];
 
+
 function Services() {
+  useEffect(()=>{
+    window.scrollTo(0,140);
+    },[])
+
   return (
     <div className="py-20 min-h-full px-6 md:px-14 border-[14px] border-zinc-900">
       
       {/* About CEO Section */}
       <motion.h2
-        className="text-4xl md:text-4xl font-semibold text-center text-gold mt-20"
+        className="text-4xl md:text-4xl font-semibold text-center text-gold mt-5"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -26,7 +31,7 @@ function Services() {
       </motion.h2>
 
       <motion.div
-        className="flex flex-col md:flex-row items-center justify-center gap-10 mt-12 max-w-6xl mx-auto"
+        className="flex flex-col md:flex-row items-center justify-center gap-10 mt-6 max-w-6xl mx-auto"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -85,7 +90,7 @@ function Services() {
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-2xl font-bold">1000+ Properties Sold</h3>
+          <h3 className="text-2xl font-bold">3000+ Properties Sold</h3>
           <p className="opacity-80 mt-2">Successfully handled premium real estate transactions.</p>
         </motion.div>
 

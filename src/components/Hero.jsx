@@ -53,9 +53,9 @@ function Hero() {
           }}
         >
           {[
-            { num: "100+", text: "Happy Customers" },
-            { num: "150+", text: "Properties Sold" },
-            { num: "10+", text: "Properties Renting" }
+            { num: "500+", text: "Happy Customers." },
+            { num: "3000+", text: "Properties Sold." },
+            { num: "1000+", text: "Properties Rented." }
           ].map((stat, index) => (
             <motion.span
               key={index}

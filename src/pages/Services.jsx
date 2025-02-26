@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect} from "react";
 import { motion } from "framer-motion";
 
 const services = [
@@ -9,7 +9,12 @@ const services = [
   { title: "Property Renting", description: "Find the best rental properties tailored to your needs." },
 ];
 
+
 function Services() {
+   useEffect(()=>{
+      window.scrollTo(0,0);
+      },[])
+  
   return (
     <div className="py-20 min-h-full px-6 md:px-14 border-[14px] border-zinc-900">
       <h2 className="text-4xl font-semibold text-center mb-8">
