@@ -20,5 +20,26 @@
     z-index: 9999;
     transform: translate(-50%, -50%);
   }
+
+  /* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Dark background */
+  border-radius: 10px;
+  padding: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E1AA5D; /* Golden scrollbar */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E1AA5D; /* Darker gold on hover */
+}
+
   
   

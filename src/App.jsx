@@ -11,8 +11,10 @@ import WhatsAppButton from './components/WhatsAppButton';
 const App = () => {
   return (
     <Router>
+     
       <CustomCursor />
-      <div>
+        <div className="overflow-y-scroll scrollbar-thin scrollbar-thumb-yellow-500 scrollbar-track-black ">
+        
         <p className="text-center text-white bg-black py-2 border-8 border-solid border-zinc-900 border-t-0 shadow-lg shadow-black">
           <span className="text-gold font-semibold">BetterZone</span> <span className="line-through">RealEtate</span> where the dreams begin.
         </p>
@@ -23,7 +25,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<LandingPage />} />
-            <Route path="/about" element={<AboutUs />} />
+            <Route path="/about" element={<AboutUs/>} />
             <Route path="/services" element={<Services />} />
           </Routes>
         </div>
@@ -32,6 +34,8 @@ const App = () => {
 
      
       <WhatsAppButton />
+      <div>
+      </div>
     </Router>
   );
 };

@@ -7,12 +7,14 @@ const services = [
   { title: "Property Investments", description: "Invest wisely in real estate with our trusted guidance." },
   { title: "Golden Visa with Investments", description: "Secure a golden visa through real estate investments." },
   { title: "Property Renting", description: "Find the best rental properties tailored to your needs." },
+  { title: "Property Management", description: "Effortlessly manage your properties with our professional solutions." },
 ];
+
 
 
 function Services() {
    useEffect(()=>{
-      window.scrollTo(0,0);
+      window.scrollTo({top:0,behavior:'smooth'});
       },[])
   
   return (

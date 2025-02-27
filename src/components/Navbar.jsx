@@ -6,7 +6,7 @@ import bg from "../assets/BetteZone.png";
 function Navbar() {
   const [activeTab, setActiveTab] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const phoneNumber = "+971557150722"; // Your contact number
+  const phoneNumber = "+97143943751"; // Your contact number
 
   return (
     <div className="w-full h-20 bg-zinc-900 px-4 py-2 sticky top-0 left-0 z-50">
