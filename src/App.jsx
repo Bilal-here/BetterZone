@@ -5,22 +5,18 @@ import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services.jsx';
-import CustomCursor from './components/CustomCursor.jsx';
 import WhatsAppButton from './components/WhatsAppButton'; 
 
-const App = () => {
+const App = () => { 
   return (
     <Router>
-     
-      <CustomCursor />
-        <div className="overflow-y-scroll scrollbar-thin scrollbar-thumb-yellow-500 scrollbar-track-black ">
-        
+        <div className="overflow-y-scroll scrollbar-thin  scrollbar-track-black">
         <p className="text-center text-white bg-black py-2 border-8 border-solid border-zinc-900 border-t-0 shadow-lg shadow-black">
-          <span className="text-gold font-semibold">BetterZone</span> <span className="line-through">RealEtate</span> where the dreams begin.
+          <span className="text-gold font-semibold">BetterZone</span> where the dreams begin.
         </p>
       </div>
       <div className="flex flex-col min-h-screen bg-black text-white font-sans">
-        <Navbar />
+        <Navbar/>
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -31,8 +27,6 @@ const App = () => {
         </div>
         <Footer />
       </div>
-
-     
       <WhatsAppButton />
       <div>
       </div>

@@ -12,7 +12,7 @@ const Footer = () => {
           <FaEnvelope className="text-yellow-500" /> shabbir@betterzonerealestate.com
         </p>
         <p className="flex items-center justify-center gap-2">
-          <FaMapMarkerAlt className="text-yellow-500" /> Invox Buisness Center, West Burry Tower(3rd floor), Buisness Bay (Down-Town) , Dubai-UAE
+          <FaMapMarkerAlt className="text-yellow-500" /> Invox Buisness Center, West Burry Tower(301), Buisness Bay (Down-Town) , Dubai-UAE
 
         </p>
       </div>

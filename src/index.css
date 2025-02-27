@@ -1,25 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-    cursor: none !important; /* Hide default cursor */
-  }
-  
-  input, textarea, button, a {
-    cursor: none !important; /* Hide cursor here too */
-  }
-
-  .custom-cursor {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background-color: gold;
-    border-radius: 50%;
-    box-shadow: 0 0 8px gold;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-  }
 
   /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -29,7 +10,6 @@
 ::-webkit-scrollbar-track {
   background: #1a1a1a; /* Dark background */
   border-radius: 10px;
-  padding: 5px;
 }
 
 ::-webkit-scrollbar-thumb {

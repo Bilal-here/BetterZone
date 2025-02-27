@@ -62,9 +62,10 @@ function AboutUS() {
           <h3 className="text-3xl font-bold text-gold">Shabbir Ahmed Siddiqui</h3>
           <h4 className="text-lg font-medium mt-2"><span className="text-gold">Phone:</span>+971 55 7150 722</h4>
           <h4 className="text-lg font-medium"><span className="text-gold">Email:</span>shabbir@betterzonerealestate.com</h4>
+          <h4 className="text-lg font-medium"><span className="text-gold">Broker Registration Number<span className="text-white">(BRN)</span>:</span>11995</h4>
           <p className="text-lg opacity-80 mt-2">
-            With over 20 years of expertise in Dubai's real estate market, 
-            Shabbir Ahmed Siddique is the driving force behind Better Zone. 
+            With over 20+ years of expertise in Dubai's real estate market, 
+            Shabbir Ahmed Siddiqui is the driving force behind Better Zone. 
             His deep market knowledge and commitment to excellence make him a 
             trusted name in the industry.
           </p>
@@ -131,7 +132,7 @@ function AboutUS() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        Meet Our <span className="text-gold">Sales Team</span>
+        Meet Our <span className="text-gold">Team</span>
       </motion.h2>
 
       <motion.div

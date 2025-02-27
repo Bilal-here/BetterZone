@@ -1,19 +1,28 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import bg from "../assets/BetteZone.png";
 
 function Navbar() {
-  const [activeTab, setActiveTab] = useState("home");
+  const location = useLocation();
+  const phoneNumber = "+971557150722"; // Your contact number
   const [menuOpen, setMenuOpen] = useState(false);
-  const phoneNumber = "+97143943751"; // Your contact number
+
+  // Get active tab from URL path (default to "home")
+  const currentPath = location.pathname.replace("/", "") || "home";
+  const [activeTab, setActiveTab] = useState(currentPath);
+
+  // Update active tab when URL changes
+  useEffect(() => {
+    setActiveTab(currentPath);
+  }, [location.pathname]);
 
   return (
-    <div className="w-full h-20 bg-zinc-900 px-4 py-2 sticky top-0 left-0 z-50">
+    <div className="w-full h-20 md:h-28 bg-zinc-900 px-4 sticky top-0 left-0 z-50">
       <nav className="flex justify-between items-center max-w-[1200px] mx-auto">
         {/* Logo */}
         <Link to="/" onClick={() => setActiveTab("home")}>
-          <img src={bg} className="h-16 w-auto" alt="Better Zone Logo" />
+          <img src={bg} className="h-16 md:min-h-24 w-auto" alt="Better Zone Logo" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -25,7 +34,6 @@ function Navbar() {
               className={`cursor-pointer px-4 py-2 transition-all duration-300 ${
                 activeTab === tab ? "text-gold bg-black rounded-md" : "text-white"
               }`}
-              onClick={() => setActiveTab(tab)}
             >
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
             </Link>
@@ -53,15 +61,12 @@ function Navbar() {
               className={`cursor-pointer px-4 py-2 my-2 transition-all duration-300 ${
                 activeTab === tab ? "text-white bg-black rounded-md" : "text-white"
               }`}
-              onClick={() => {
-                setActiveTab(tab);
-                setMenuOpen(false);
-              }}
+              onClick={() => setMenuOpen(false)}
             >
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
             </Link>
           ))}
-          
+
           {/* Mobile Call Us Button */}
           <a href={`tel:${phoneNumber}`} className="text-white mt-4 hover:text-gold transition">
             Call Us: {phoneNumber}
